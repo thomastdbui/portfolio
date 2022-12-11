@@ -14,6 +14,7 @@ import Koala from './Koala'
 import KoKo from './KoKo'
 import Personas from './Personas'
 import Consume from './Consume'
+import ScrollButton from './ScrollButton';
 
 
 
@@ -125,6 +126,7 @@ function App(props) {
                     </div>
                 </div>
             </header> 
+            {/* <ScrollButton/> */}
             
 
         
@@ -228,7 +230,7 @@ function App(props) {
             
             
             <div className='marquee-holder' >
-                <Marquee className='marquee' gradient={false}>
+                <Marquee className='marquee' pauseOnHover speed='65' gradient={false}>
                     I can be a React component, multiple React components, or just some text.
                 </Marquee> 
             </div>

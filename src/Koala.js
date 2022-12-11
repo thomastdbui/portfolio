@@ -17,6 +17,7 @@ import Modal from 'react-bootstrap/Modal';
 import CardHeader from 'react-bootstrap/esm/CardHeader';
 import { Accordion } from 'react-bootstrap';
 import { Figure } from 'react-bootstrap';
+import ScrollButton from './ScrollButton';
 
 import koalaGif from './images/koala-sm.gif';
 import kelly1 from './sketches-gallery/kelly1.png';
@@ -88,7 +89,7 @@ function Work(props) {
         <>
           {['md'].map((expand) => (
                 <Navbar id="modal-navbar" key={expand}  bg="light" expand={expand} className="mb-3" sticky='top' >
-                    <Container>
+                    <Container className='justify-content-end' id='modal-nav-container'>
                         {/* <Navbar.Brand href="#">tiredcoder714</Navbar.Brand> */}
                         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
                         <Navbar.Collapse id="responsive-navbar-nav">
@@ -109,172 +110,10 @@ function Work(props) {
       );
     }
 
-    // function HoverCard() {
-    //     return (
+  
 
 
-    //         <div className="py-5">
-    //             {/* <h3 className="font-weight-bold mb-0">Demo 1</h3> */}
-    //             {/* <p className="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> */}
-    //             <div className="row">
-    //                 <div className="col-lg-6 mb-3 mb-lg-0" >
-    //                     <div className="hover hover-1 text-white rounded"><img src="https://bootstrapious.com/i/snippets/sn-img-hover/hoverSet-3.jpg" alt=""/>
-    //                     <div className="hover-overlay"></div>
-    //                     <div className="hover-1-content px-5 py-4">
-    //                         <h3 className="hover-1-title text-uppercase font-weight-bold mb-0"> <span className="font-weight-light">Image </span>Caption</h3>
-    //                         <p className="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-    //                     </div>
-    //                     </div>
-    //                 </div>
-
-    //                 <div className="col-lg-6">
-    //                     <div className="hover hover-1 text-white rounded"><img src="https://bootstrapious.com/i/snippets/sn-img-hover/hoverSet-4.jpg" alt=""/>
-    //                     <div className="hover-overlay"></div>
-    //                     <div className="hover-1-content px-5 py-4">
-    //                         <h3 className="hover-1-title text-uppercase font-weight-bold mb-0"> <span className="font-weight-light">Image </span>Caption</h3>
-    //                         <p className="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-    //                     </div>
-    //                     </div>
-    //                 </div>
-    //             </div>
-    //         </div>
-    //     )
-    // }
-
-
-    function FsModal({showKoala}, {setShowKoala}) {
-        const values = [true];
-        const [fullscreen, setFullscreen] = useState(true);
-        // const [show, setShow] = useState(false);
-      
-        // function handleShow(breakpoint) {
-        //   setFullscreen(breakpoint);
-        //   setShow(true);
-        // }
-      
-        return (
-          <>
-          {/* change this from a button to a clickable card or something */}
-            {/* {values.map((v, idx) => ( */}
-            {/* //   <Button key={idx} className="me-2 mb-2" onClick={() => setShow(true)}>
-            //     Full screen
-            //   </Button>
-                // <Card className='card' style={{ width: '18rem' }}>
-                //     <Card.Img variant="top" src="holder.js/100px180" />
-                //     <Card.Body>
-                //         <Card.Title>Card Title</Card.Title>
-                //         <Card.Text>
-                //         Some quick example text to build on the card title and make up the
-                //         bulk of the card's content.
-                //         </Card.Text>
-                //         <Button  className="me-2 mb-2" onClick={() => setShow(true)}>
-                //         Full screen
-                //         </Button>
-                //     </Card.Body>
-                // </Card> */}
-
-                {/* <Container onClick={setShow(true)}> */}
-                            
-
-
-                    
-                 {/* </Container> */}
-
-
-            <div className="py-5">
-                <div className="row">
-                    <div className="col-lg-12 mb-3 mb-lg-0" > 
-                        <a onClick={() => setShowKoala(true)}>
-                            <div className="hover hover-1 text-white rounded" ><img src="https://bootstrapious.com/i/snippets/sn-img-hover/hoverSet-3.jpg" alt=""/>
-                                <div className="hover-overlay"></div>
-                                <div className="hover-1-content px-5 py-4" >
-                                    <h3 className="hover-1-title text-uppercase font-weight-bold mb-0"> <span className="font-weight-light">Koala</span></h3>
-                                    <p className="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-          
-
-            {/* ))} */}
-
-
-
-            <Modal className='modal' 
-                
-                show={showKoala} 
-           
-                 onHide={() => setShowKoala(false)}>
-              <Modal.Header className='modal-header' closeButton >
-                <Modal.Title className='modal-title'>Koala</Modal.Title>
-                {ModalNavbar()}
-              </Modal.Header>
-              
-
-              {/* <Modal.Body className='modal-body'> */}
-
-                <div id='modal-home' className='p-5'>
-                    {/* style={{ backgroundImage: `url(https://images.unsplash.com/photo-1460411794035-42aac080490a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80)`, height: "100vh"}}> */}
-                    <div className='mask' style={{ backgroundColor: 'rgba(0, 0, 0, 0.7)', height:"100vh"}}>
-                        <div className='d-flex justify-content-center align-items-center h-100'>
-                            <div className='text-white'>
-                                <h1 className='boujee-text'>Koala</h1>
-                                <h4 className='mb-3'>Passionate about finding creative solutions for social good through technology</h4>
-                                <h5 className='mb-3'>—— studying Computer Science @ Brown</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-              
-                < div className='modal-body' id='context' style={{backgroundColor: '#262626', height: "75vh"}}>
-                    <div className='d-flex justify-content-center align-items-center h-100'>
-                        <div className='text-white'>
-                            <h1 className='mb-5'>Context</h1>
-                            <h5 className='mb-3'>Passionate about finding creative solutions for social good through technology</h5>
-                            <h5 className='mb-3'>—— studying Computer Science @ Brown</h5>
-                        </div>
-                    </div>
-                </div>
-                < div className='modal-body' id='research' style={{ height: "75vh" }}>
-                    <div className='d-flex justify-content-center align-items-center h-100'>
-                        <div className='text-black'>
-                            <h1 className='mb-5'>Research</h1>
-                            <h5 className='mb-3'>Passionate about finding creative solutions for social good through technology</h5>
-                            <h5 className='mb-3'>—— studying Computer Science @ Brown</h5>
-                        </div>
-                    </div>
-                </div>
-                < div className='modal-body' id='design-iterations' style={{backgroundColor: '#262626', height: "75vh"}}>
-                    <div className='d-flex justify-content-center align-items-center h-100'>
-                        <div className='text-white'>
-                            <h1 className='mb-5'>Design Iterations</h1>
-                            <h5 className='mb-3'>Passionate about finding creative solutions for social good through technology</h5>
-                            <h5 className='mb-3'>—— studying Computer Science @ Brown</h5>
-                        </div>
-                    </div>
-                </div>
-                < div className='modal-body' id='conclusion' style={{ height: "75vh" }}>
-                    <div className='d-flex justify-content-center align-items-center h-100'>
-                        <div className='text-black'>
-                            <h1 className='mb-5'>Conclusion</h1>
-                            <h5 className='mb-3'>Passionate about finding creative solutions for social good through technology</h5>
-                            <h5 className='mb-3'>—— studying Computer Science @ Brown</h5>
-                        </div>
-                    </div>
-                </div>
-
-                  
-                  
-
-              {/* </Modal.Body> */}
-            </Modal>
-          </>
-        );
-    }
-
+    
 
     function InitialSketches() {
         return (
@@ -366,9 +205,10 @@ function Work(props) {
           <Accordion alwaysOpen>
               
             <Accordion.Item eventKey="1">
-              <Accordion.Header>All Users:</Accordion.Header>
+              <Accordion.Header>All Users</Accordion.Header>
               <Accordion.Body>
                   <div className='md-flex'>
+                      <li>Log-in: a universal portal through which all users can enter the application</li>
                       <Figure>
                           <Figure.Image className='sketch' src={studentsLogin}/>
                           <Figure.Caption className='sketch-text'>Shared Login Screen</Figure.Caption>
@@ -380,13 +220,15 @@ function Work(props) {
               <Accordion.Header>Students</Accordion.Header>
               <Accordion.Body>
                   <div className='md-flex'>
+                        <li>Dashboard: to view their upcoming sessions.</li>
+                        <li>Session: where they will be engaging with the tutor in the interactive educational game.</li>
                       <Figure>
-                          <Figure.Image className='sketch' src={studentsLogin}/>
-                          <Figure.Caption className='sketch-text'>Game Interface</Figure.Caption>
+                          <Figure.Image className='sketch' src={studentPOV}/>
+                          <Figure.Caption className='sketch-text'>Student Dashboard</Figure.Caption>
                       </Figure>
                       <Figure>
-                          <Figure.Image className='sketch' src={kelly2}/>
-                          <Figure.Caption className='sketch-text'>Landing Page</Figure.Caption>
+                          <Figure.Image className='sketch' src={tutorStudentPOV}/>
+                          <Figure.Caption className='sketch-text'>Shared Student and Tutor Session Screen</Figure.Caption>
                       </Figure>
                       <Figure>
                           <Figure.Image className='sketch' src={kelly3}/>
@@ -399,17 +241,20 @@ function Work(props) {
               <Accordion.Header>Parents</Accordion.Header>
               <Accordion.Body>
                   <div className='md-flex'>
+                      <li>Dashboard: to view their child's progress and to see their schedule.</li>
+                      <li>Searching for Tutors: to sign their child up for more or different tutors.</li>
+                      <li>Billing and Subscriptions: to view their subscription plan and pay any outstanding bills.</li>
                       <Figure>
-                          <Figure.Image className='sketch' src={rachel1}/>
-                          <Figure.Caption className='sketch-text'>Opening Page</Figure.Caption>
+                          <Figure.Image className='sketch' src={parentDashboard}/>
+                          <Figure.Caption className='sketch-text'>Parent Dashboard</Figure.Caption>
                       </Figure>
                       <Figure>
-                          <Figure.Image className='sketch' src={rachel2}/>
-                          <Figure.Caption className='sketch-text'>Tutor Landing Page</Figure.Caption>
+                          <Figure.Image className='sketch' src={parentSearchTutors}/>
+                          <Figure.Caption className='sketch-text'>Searching for a Tutor</Figure.Caption>
                       </Figure>
                       <Figure>
-                          <Figure.Image className='sketch' src={rachel3}/>
-                          <Figure.Caption className='sketch-text'>Profile Page</Figure.Caption>
+                          <Figure.Image className='sketch' src={parentBilling}/>
+                          <Figure.Caption className='sketch-text'>Billing and Subscription</Figure.Caption>
                       </Figure>
                   </div>
               </Accordion.Body>
@@ -418,17 +263,31 @@ function Work(props) {
               <Accordion.Header>Tutors</Accordion.Header>
               <Accordion.Body>
                   <div className='md-flex'>
+                    <li>Dashboard: to view their schedule and launch any upcoming meetings.</li>
+                    <li>Session: where they will be engaging with the student in the interactive educational game.</li>
+                    <li>Games: where tutors can purchase games or subscriptions to use while engaging with their students</li>
+                    <li>Students: where tutors can view and manage their students.</li>
+                    <li>Schedule: garnering inspiration from Google Calendar, we wanted a layout that would mimic that mental
+                        model of a calendar for their schedule.</li>
                       <Figure>
-                          <Figure.Image className='sketch' src={thomas1}/>
-                          <Figure.Caption className='sketch-text'>Game Interface</Figure.Caption>
+                          <Figure.Image className='sketch' src={tutorDashboard}/>
+                          <Figure.Caption className='sketch-text'>Tutor Dashboard</Figure.Caption>
                       </Figure>
                       <Figure>
-                          <Figure.Image className='sketch' src={thomas2}/>
-                          <Figure.Caption className='sketch-text'>Tutor Profile</Figure.Caption>
+                          <Figure.Image className='sketch' src={tutorStudentPOV}/>
+                          <Figure.Caption className='sketch-text'>Shared Student and Tutor Session Screen</Figure.Caption>
                       </Figure>
                       <Figure>
-                          <Figure.Image className='sketch' src={thomas3}/>
-                          <Figure.Caption className='sketch-text'>Student Interface</Figure.Caption>
+                          <Figure.Image className='sketch' src={tutorGames}/>
+                          <Figure.Caption className='sketch-text'>Game Store</Figure.Caption>
+                      </Figure>
+                      <Figure>
+                          <Figure.Image className='sketch' src={tutorStudents}/>
+                          <Figure.Caption className='sketch-text'>Student Management Screen</Figure.Caption>
+                      </Figure>
+                      <Figure>
+                          <Figure.Image className='sketch' src={tutorSchedule}/>
+                          <Figure.Caption className='sketch-text'>Scheduling Screen</Figure.Caption>
                       </Figure>
                   </div>
               </Accordion.Body>
@@ -450,9 +309,16 @@ function Work(props) {
            
                  onHide={() => props.setShowKoala(false)}>
               <Modal.Header className='modal-header' closeButton >
-                <Modal.Title className='modal-title'>Koala</Modal.Title>
+                <Modal.Title className='modal-title'>
+                    <a className='modal-brand' href="#modal-home">
+                        Koala
+                    </a>
+                </Modal.Title>
                 {ModalNavbar()}
               </Modal.Header>
+
+              {/* <ScrollButton/> */}
+
               
 
               {/* <Modal.Body className='modal-body'> */}
@@ -480,7 +346,7 @@ function Work(props) {
               
                 < div className='modal-body' id='context' >
                     <div className='d-flex justify-content-center align-items-center h-100'>
-                        <div id='textBox' className='text-black'>
+                        <div id='textBox' className='text-black' >
                             <h1  className='display-4 mb-5'>Context</h1>
                             <div className='row '>
                                 <div className='col two-col'>
