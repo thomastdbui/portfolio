@@ -26,6 +26,13 @@ import CardHeader from 'react-bootstrap/esm/CardHeader';
 import { Card } from 'react-bootstrap';
 
 
+
+import koalaGif from './images/koala-sm.gif';
+import friedChicken from './images/fried-chicken.jpeg';
+import blueroom from './images/blueroom.jpeg';
+import personas from './images/personas.png';
+
+
   
 
 
@@ -149,11 +156,12 @@ function App(props) {
                             <div className="row workRow">
                                 <div className="col-lg-12 mb-3 mb-lg-0" > 
                                     <a onClick={() => setShowKoala(true)}>
-                                        <div className="hover hover-1 text-white rounded" ><img src="https://bootstrapious.com/i/snippets/sn-img-hover/hoverSet-3.jpg" alt=""/>
+                                        <div className="hover hover-1 text-white rounded" >
+                                            <img className='koala-holder' src={koalaGif} alt="Koala"/>
                                             <div className="hover-overlay"></div>
                                             <div className="hover-1-content px-5 py-4" >
                                                 <h3 className="hover-1-title text-uppercase font-weight-bold mb-0"> <span className="font-weight-light">Koala</span></h3>
-                                                <p className="hover-1-description font-weight-light mb-0">Iteratively designed an interactive interface for an emerging startup</p>
+                                                <p className="hover-1-description font-weight-bold mb-0  ">Iteratively designed an interactive interface for an emerging startup</p>
                                             </div>
                                         </div>
                                     </a>
@@ -164,11 +172,12 @@ function App(props) {
                             <div className="row workRow">
                                 <div className="col-lg-12 mb-3 mb-lg-0" > 
                                     <a onClick={() => setShowKoKo(true)}>
-                                        <div className="hover hover-1 text-white rounded" ><img src="https://bootstrapious.com/i/snippets/sn-img-hover/hoverSet-3.jpg" alt=""/>
+                                        <div className="hover hover-1 text-white rounded" >
+                                            <img className='koko-holder' src={friedChicken} alt="KoKo Chicken"/>
                                             <div className="hover-overlay"></div>
                                             <div className="hover-1-content px-5 py-4" >
                                                 <h3 className="hover-1-title text-uppercase font-weight-bold mb-0"> <span className="font-weight-light">KoKo Chicken</span></h3>
-                                                <p className="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                                <p className="hover-1-description font-weight-light mb-0">Responsively-Redesigned a website for a hometown Korean fried chicken restaurant</p>
                                             </div>
                                         </div>
                                     </a>
@@ -178,11 +187,11 @@ function App(props) {
                             <div className="row workRow">
                                 <div className="col-lg-12 mb-3 mb-lg-0" > 
                                     <a onClick={() => setShowConsume(true)}>
-                                        <div className="hover hover-1 text-white rounded" ><img src="https://bootstrapious.com/i/snippets/sn-img-hover/hoverSet-3.jpg" alt=""/>
+                                        <div className="hover hover-1 text-white rounded" ><img src={blueroom} alt="The Blue Room"/>
                                             <div className="hover-overlay"></div>
                                             <div className="hover-1-content px-5 py-4" >
                                                 <h3 className="hover-1-title text-uppercase font-weight-bold mb-0"> <span className="font-weight-light">Consume @ Brown</span></h3>
-                                                <p className="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                                <p className="hover-1-description font-weight-light mb-0">Developed an interactive interface for choosing your next meal at Brown University</p>
                                             </div>
                                         </div>
                                     </a>
@@ -192,11 +201,11 @@ function App(props) {
                             <div className="row workRow">
                                 <div className="col-lg-12 mb-3 mb-lg-0" > 
                                     <a onClick={() => setShowPersonas(true)}>
-                                        <div className="hover hover-1 text-white rounded" ><img src="https://bootstrapious.com/i/snippets/sn-img-hover/hoverSet-3.jpg" alt=""/>
+                                        <div className="hover hover-1 text-white rounded" ><img src={personas} alt="Personas and Storyboarding"/>
                                             <div className="hover-overlay"></div>
                                             <div className="hover-1-content px-5 py-4" >
                                                 <h3 className="hover-1-title text-uppercase font-weight-bold mb-0"> <span className="font-weight-light">Personas and Storyboarding</span></h3>
-                                                <p className="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                                <p className="hover-1-description font-weight-light mb-0">Created User Personas and tracked a User Journey for interacting with an elevator interface</p>
                                             </div>
                                         </div>
                                     </a>
@@ -211,8 +220,6 @@ function App(props) {
                         <Personas showPersonas = {showPersonas} setShowPersonas = {setShowPersonas}></Personas>
                         
 
-                        <h5 className='mb-3'>Passionate about finding creative solutions for social good through technology</h5>
-                        <h5 className='mb-3'>—— studying Computer Science @ Brown</h5>
 
                     </div>
                 </div>
@@ -222,16 +229,22 @@ function App(props) {
                 <div className='d-flex justify-content-center align-items-center h-100'>
                     <div id='textBox' className='text-white'>
                         <h1 className='boujee-text'>Contact </h1>
-                        <h5 className='mb-3'>Passionate about finding creative solutions for social good through technology</h5>
-                        <h5 className='mb-3'>—— studying Computer Science @ Brown</h5>
+                        <h5 className='mb-3'>Email: ______________@brown.edu</h5>
+                        <h5 className='mb-3'>Phone Number: (123) 456-7890</h5>
+                        <h5 className='mb-3'>Linkedin: </h5>
+                        <h5 className='mb-3'>Github: </h5>
+
                     </div>
                 </div>
             </div>
             
             
             <div className='marquee-holder' >
-                <Marquee className='marquee' pauseOnHover speed='65' gradient={false}>
-                    I can be a React component, multiple React components, or just some text.
+                <Marquee className='marquee' pauseOnHover speed='30' gradient={false}>
+                   |   tiredcoder714 once solved a Rubik's cube in 9 seconds     |   tiredcoder714 has played piano for over 10 years.   |   tiredcoder714 favorite hobbies are always active ones   |  
+                   any time the weather is sunny and above 60 degrees, catch tiredcoder714 playing spikeball   |   tiredcoder714 played basketball and tennis for his high school team   |  
+                   one of tiredcoder714's middle school phase was magic tricks   |   tiredcoder714's pandemic hobby was singing   |   tiredcoder714 loves jazz and is learning jazz piano improvisation   |   
+                   tiredcoder714 is left-handed, but does everything else with his right arm   |   tiredcoder714's favorite song is When I was Your Man by Bruno Mars
                 </Marquee> 
             </div>
 

@@ -59,6 +59,22 @@
   padding-right: 8rem!important;
 } */
 
+#iframe {
+  display: block; 
+  justify-self: center;  
+  width: 75vw; 
+  height: 75vh;
+  margin-top: 0!important;
+  padding-top: 0!important;
+}
+
+.card-title, .card-text {
+  color: black!important;
+}
+.card-title {
+  font-weight:bold!important;
+}
+
 .btn-close {
   margin: 0!important;
 }
@@ -280,6 +296,18 @@ animation: gradient 7s ease infinite;
   transition: all 0.4s;
 }
 
+.koala-holder {
+  background-color: rgb(163, 177, 138);
+  /* background-color:  */
+}
+
+#koko-logo {
+  border-radius: 50%;
+}
+
+
+
+
 
 
 
@@ -351,12 +379,22 @@ animation: gradient 7s ease infinite;
 
 #textBox {
     width: 70rem!important;
-    padding-top: 5rem!important;
-    padding-bottom: 5rem!important;
+    padding-top: 15rem!important;
+    padding-bottom: 15rem!important;
     padding-right: 2rem;
     padding-left: 2rem;
     /* margin-right: 0!important; */
 
+}
+
+#elevator_interface {
+  width: 40rem!important;
+}
+#storyboard {
+  width: 100%!important;
+}
+#persona {
+  width: 100%!important;
 }
 
 .two-col {
