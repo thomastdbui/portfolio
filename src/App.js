@@ -142,7 +142,9 @@ function App(props) {
                 <div className='d-flex justify-content-center align-items-center h-100'>
                     <div id='textBox' className='text-white'>
                         <h1 className='boujee-text'>About </h1>
-                        <h5 className='mb-3'>Passionate about finding creative solutions for social good through technology</h5>
+                        <h5 className='mb-3'>Hi there! I was born and raised in sunny Southern California and currently based in _____. I'm currently a second-year student at Brown University interested in 
+                        design and software engineering. 
+                        Please don't hesitate to to reach out! </h5>
                         <h5 className='mb-3'>—— studying Computer Science @ Brown</h5>
                     </div>
                 </div>
