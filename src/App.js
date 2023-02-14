@@ -234,7 +234,8 @@ function App(props) {
                         <h1 className='boujee-text'>Contact </h1>
                         <h5 className='mb-3'>Email: thomas_bui@brown.edu</h5>
                         <h5 className='mb-3'>Phone Number: (714) 989-3506</h5>
-                        <h5 className='mb-3'>Linkedin: <a href="https://www.linkedin.com/in/thomastdbui/">thomastdbui</a> </h5>
+                        <h5 className='mb-3'>Linkedin: <Button variant="dark" href="https://www.linkedin.com/in/thomastdbui/" target="_blank">thomastdbui</Button>{' '} </h5>
+                        
                         <h5 className='mb-3'>Github: </h5>
 
                     </div>

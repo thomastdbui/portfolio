@@ -163,7 +163,7 @@ function Work(props) {
                                 Here's my webapp!
                             </h5>
                             <div className="d-grid gap-2  p-5">
-                                <Button variant="dark" href="https://tiredcoder714.github.io/development-uiux/" target="_blank">Take me to Consume @ Brown!</Button>{' '}
+                                <Button variant="dark" href="https://thomastdbui.github.io/development-uiux/" target="_blank">Take me to Consume @ Brown!</Button>{' '}
                             </div>
                         </div>
                     </div>
