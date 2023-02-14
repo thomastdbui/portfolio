@@ -15,7 +15,7 @@ import KoKo from './KoKo'
 import Personas from './Personas'
 import Consume from './Consume'
 import ScrollButton from './ScrollButton';
-import { Link } from 'react-router-dom';
+import Image from 'react-bootstrap/Image';
 
 
 
@@ -32,6 +32,8 @@ import koalaGif from './images/koala-sm.gif';
 import friedChicken from './images/fried-chicken.jpeg';
 import blueroom from './images/blueroom.jpeg';
 import personas from './images/personas.png';
+import Headshot from './images/Headshot.jpg'
+
 
 
   
@@ -143,10 +145,17 @@ function App(props) {
                 <div className='d-flex justify-content-center align-items-center h-100'>
                     <div id='textBox' className='text-white'>
                         <h1 className='boujee-text'>About </h1>
-                        <h5 className='mb-3'>Hi there! I was born and raised in sunny Southern California and currently based in _____. I'm a second-year student at Brown University interested in 
-                        design and software engineering. 
-                        Please don't hesitate to to reach out! </h5>
-                        <h5 className='mb-3'>—— studying Computer Science @ Brown</h5>
+                        <div className='about-holder'>
+                            <div className='headshot-holder'>
+                                <Image className='headshot' src={Headshot} alt="Thomas" roundedCircle />
+                            </div>
+                            <div className='about-content-holder'>
+                                <h5 className='mb-3'>Hi there! I was born and raised in sunny Southern California and currently based in Providence, Rhode Island. I'm a second-year student at Brown University interested in 
+                                design and software engineering. 
+                                Please don't hesitate to to reach out! </h5>
+                                <h5 className='mb-3'>—— studying Computer Science @ Brown</h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -231,12 +240,23 @@ function App(props) {
             < div id='contact' style={{backgroundColor: '#262626', height: "100vh"}}>
                 <div className='d-flex justify-content-center align-items-center h-100'>
                     <div id='textBox' className='text-white'>
-                        <h1 className='boujee-text'>Contact </h1>
-                        <h5 className='mb-3'>Email: thomas_bui@brown.edu</h5>
-                        <h5 className='mb-3'>Phone Number: (714) 989-3506</h5>
-                        <h5 className='mb-3'>Linkedin: <Button variant="dark" href="https://www.linkedin.com/in/thomastdbui/" target="_blank">thomastdbui</Button>{' '} </h5>
-                        
-                        <h5 className='mb-3'>Github: </h5>
+                        <h1 className='boujee-text mb-5'>Contact </h1>
+                        <div id='contact-box'>
+                            <h5 className='mb-3' >Email: </h5>
+                            <h5 className='mb-3'>thomas_bui@brown.edu </h5>
+
+                        </div>
+                        <div id='contact-box'>
+                            <h5 className='mb-3'>Phone Number: </h5>
+                            <h5 className='mb-3'>(714) 989-3506</h5>
+
+                        </div>
+                        <div id='contact-box'>
+                            <h5 className='mb-3'>Linkedin: </h5>
+                            <h5 className='mb-3'><a href="https://www.linkedin.com/in/thomastdbui/" target="_blank">thomastdbui</a> </h5>
+
+                        </div>
+                        {/* <h5 className='mb-3'>Github: </h5> */}
 
                     </div>
                 </div>

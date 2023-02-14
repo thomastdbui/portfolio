@@ -23,6 +23,11 @@
 
 }
 
+#contact-box {
+  display: flex;
+  justify-content: space-between;
+}
+
 .modal-brand {
     color: black!important;
     text-decoration:none!important;
@@ -299,6 +304,28 @@ animation: gradient 7s ease infinite;
 .koala-holder {
   background-color: rgb(163, 177, 138);
   /* background-color:  */
+}
+
+.headshot {
+  width: 20rem;
+}
+
+.about-holder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.headshot-holder {
+  display: flex;
+  justify-content: center;
+  /* margin-top: 5rem; */
+  /* margin-bottom: 5rem; */
+}
+
+.about-content-holder {
+  width: 40rem;
 }
 
 #koko-logo {
