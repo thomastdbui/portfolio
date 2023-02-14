@@ -15,6 +15,7 @@ import KoKo from './KoKo'
 import Personas from './Personas'
 import Consume from './Consume'
 import ScrollButton from './ScrollButton';
+import { Link } from 'react-router-dom';
 
 
 
@@ -54,7 +55,7 @@ function MyNavbar() {
                 <Container>
                     <Navbar.Brand  href="#">
                         <div className='boujee-text-dark'>
-                            tiredcoder714
+                            Thomas Bui
                         </div>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
@@ -65,7 +66,7 @@ function MyNavbar() {
                     >
                     <Offcanvas.Header closeButton>
                         <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                            tiredcoder714
+                            Thomas Bui
                         </Offcanvas.Title>
                     </Offcanvas.Header>
                     <Offcanvas.Body>         
@@ -125,7 +126,7 @@ function App(props) {
                     <div className='mask' style={{ backgroundColor: 'rgba(0, 0, 0, 0.7)', height:"100vh"}}>
                         <div className='d-flex justify-content-center align-items-center h-100'>
                             <div className='text-white'>
-                                <h1 className='boujee-text-header'>Hi, I'm tiredcoder714! </h1>
+                                <h1 className='boujee-text-header'>Hi, I'm Thomas! </h1>
                                 <h4 className='mb-3'>Passionate about finding creative solutions for social good through technology</h4>
                                 <h5 className='mb-3'>—— studying Computer Science @ Brown</h5>
                             </div>
@@ -231,9 +232,9 @@ function App(props) {
                 <div className='d-flex justify-content-center align-items-center h-100'>
                     <div id='textBox' className='text-white'>
                         <h1 className='boujee-text'>Contact </h1>
-                        <h5 className='mb-3'>Email: ______________@brown.edu</h5>
-                        <h5 className='mb-3'>Phone Number: (123) 456-7890</h5>
-                        <h5 className='mb-3'>Linkedin: </h5>
+                        <h5 className='mb-3'>Email: thomas_bui@brown.edu</h5>
+                        <h5 className='mb-3'>Phone Number: (714) 989-3506</h5>
+                        <h5 className='mb-3'>Linkedin: <a href="https://www.linkedin.com/in/thomastdbui/">thomastdbui</a> </h5>
                         <h5 className='mb-3'>Github: </h5>
 
                     </div>
@@ -243,10 +244,10 @@ function App(props) {
             
             <div className='marquee-holder' >
                 <Marquee className='marquee' pauseOnHover speed='30' gradient={false}>
-                   |   tiredcoder714 once solved a Rubik's cube in 9 seconds     |   tiredcoder714 has played piano for over 10 years.   |   tiredcoder714 favorite hobbies are always active ones   |  
-                   any time the weather is sunny and above 60 degrees, catch tiredcoder714 playing spikeball   |   tiredcoder714 played basketball and tennis for his high school team   |  
-                   one of tiredcoder714's middle school phase was magic tricks   |   tiredcoder714's pandemic hobby was singing   |   tiredcoder714 loves jazz and is learning jazz piano improvisation   |   
-                   tiredcoder714 is left-handed, but does everything else with his right arm   |   tiredcoder714's favorite song is When I was Your Man by Bruno Mars
+                   |   Thomas once solved a Rubik's cube in 9 seconds     |   thomas has played piano for over 10 years.   |   Thomas's favorite hobbies are always active ones   |  
+                   any time the weather is sunny and above 60 degrees, catch Thomas playing spikeball   |   Thomas played basketball and tennis for his high school team   |  
+                   one of Thomas's middle school phase was magic tricks   |   Thomas's pandemic hobby was singing   |   Thomas loves jazz and is learning jazz piano improvisation   |   
+                   Thomas is left-handed, but does everything else with his right arm   |   Thomas's favorite song is When I was Your Man by Bruno Mars
                 </Marquee> 
             </div>
 
